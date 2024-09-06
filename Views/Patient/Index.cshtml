@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Patient>
+@{
+}
+<p align="right">
+    <a asp-action="Create" class="btn btn-outline-dark"> Add Patient </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PatientId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegistrationNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatientName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DOB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelitem => item.PatientId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.RegistrationNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.PatientName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.DOB)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.PhoneNumber)
+                </td>
+                
+            </tr>
+        }
+
+    </tbody>
+</table>

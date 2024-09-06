@@ -1,0 +1,67 @@
+﻿@model Patient
+@{
+}
+
+<h4> New Patient Info</h4>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" id="createPatientForm">
+            <!-- Validation Summary-->
+            <div asp-valdiation-summary="ModelOnly" class="text-danger"> </div>
+
+            <!--Registration number text-->
+            <div class="form-group">
+                <label asp-for="RegistrationNo" class="control-label"> </label>
+                <input asp-for="RegistrationNo" class="form-control" />
+                <span asp-validation-for="RegistrationNo" class="text-danger"> </span>
+            </div>
+
+            <!--Patient Name text-->
+            <div class="form-group">
+                <label asp-for="PatientName" class="control-label"> </label>
+                <input asp-for="PatientName" class="form-control" />
+                <span asp-validation-for="PatientName" class="text-danger"> </span>
+            </div>
+
+            <!--Patient DOB text-->
+            <div class="form-group">
+                <label asp-for="DOB" class="control-label"> </label>
+                <input asp-for="DOB" class="form-control" />
+                <span asp-validation-for="DOB" class="text-danger"> </span>
+            </div>
+
+            <!--Patient Gender Radio Button-->
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label">Gender: </label>
+                <div>
+                    <input type="radio" asp-for="Gender" name="Gender" value="Male" />
+                    Male
+                </div>
+                <div>
+                    <input type="radio" asp-for="Gender" name="Gender" value="Female" />
+                    Female
+                </div>
+            </div>
+
+            <!--Patient Address text-->
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"> </label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"> </span>
+            </div>
+
+            <!--Patient Phone Number text-->
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"> </label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"> </span>
+            </div>
+
+
+
+
+</form>
+</div>
+</div>
+
